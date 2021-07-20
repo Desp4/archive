@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>import/ibtn_pause_c1.png</file>
+        <file>import/ibtn_play_c1.png</file>
+    </qresource>
+</RCC>

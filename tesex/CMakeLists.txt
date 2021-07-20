@@ -1,0 +1,11 @@
+project(test C)
+
+add_executable(tesex server.c netw.h netw.c util.h util.c netdata.h netdata.c)
+add_executable(clex client.c netw.h netw.c util.h util.c netdata.h netdata.c)
+if (WIN32)
+    target_link_libraries(tesex -lwininet -lWs2_32)
+    target_link_libraries(clex -lwininet -lWs2_32)
+else()
+    target_link_libraries(tesex -lcurl -lpthread)
+    target_link_libraries(clex -lcurl -lpthread)
+endif()
